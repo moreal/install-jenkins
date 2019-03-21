@@ -14,6 +14,10 @@ resource "google_compute_instance" "jenkins" {
 
   network_interface {
     subnetwork = "${google_compute_subnetwork.web-subnetwork.self_link}"
+
+    access_config {
+      nat_ip = "${google_compute_address.jenkins-internal-ip.address}"
+    }
   }
 
   metadata {
