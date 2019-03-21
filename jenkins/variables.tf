@@ -22,3 +22,8 @@ variable "machine-type" {
   description = "Jenkins instance type (ex - f1-micro)"
   default     = "f1-micro"
 }
+
+variable "instance-initialize-script-path" {
+  description = "Script Path for initialize instnace"
+  default     = "scripts/install.sh"
+}

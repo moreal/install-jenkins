@@ -10,7 +10,17 @@ resource "google_compute_instance" "jenkins" {
     }
   }
 
+  metadata_startup_script = "${file(var.instance-initialize-script-path)}"
+
   network_interface {
-    network = "default"
+    subnetwork = "${google_compute_subnetwork.web-subnetwork.self_link}"
   }
+
+  metadata {
+    sshKeys = "test"
+  }
+
+  depends_on = [
+    "google_compute_subnetwork.web-subnetwork",
+  ]
 }
