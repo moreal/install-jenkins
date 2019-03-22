@@ -1,6 +1,6 @@
 variable "credentials-path" {
   description = "Path of GCP credentials.json"
-  default     = "./credentials.json"
+  default     = ".secrets/credentials.json"
 }
 
 variable "project-name" {
