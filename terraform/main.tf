@@ -1,3 +1,3 @@
 module "jenkins" {
-  source = "modules/google"
+  source = "modules/amazon"
 }
