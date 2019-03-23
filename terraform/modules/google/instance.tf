@@ -19,7 +19,7 @@ resource "google_compute_instance" "jenkins" {
   }
 
   metadata {
-    startup-script = "${file(var.instance-initialize-script-path)}"
+    startup-script = "${file("${path.root}/${var.instance-initialize-script-path}")}"
     ssh-keys       = "ubuntu:${tls_private_key.jenkins.public_key_openssh}"
   }
 
