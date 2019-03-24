@@ -1,3 +1,3 @@
-# install-jenkins-in-gcp
+# install-jenkins-with-terraform
 
-Install jenkins in gcp, using terraform, ansible or chef etc..
+Install jenkins, using terraform
